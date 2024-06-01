@@ -24,16 +24,20 @@ body,
   line-height: 1;
   letter-spacing: -0.1rem; }
 
-.paragraph {
+.paragraph__md--bold {
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px; }
+
+.paragraph__md--regular {
+  line-height: 1.5;
+  font-size: 1.8rem;
+  font-weight: 400; }
+
+.paragraph__sm {
+  font-size: 1.6rem;
   line-height: 1.5; }
-  .paragraph__md {
-    font-size: 1.8rem; }
-    .paragraph__md--bold {
-      font-weight: 700; }
-    .paragraph__md--regular {
-      font-weight: 400; }
-  .paragraph__sm {
-    font-size: 1.6rem; }
 
 .form {
   left: 50%;
@@ -142,8 +146,14 @@ body,
         opacity: 0;
         transition: all 0.2s; }
       .form__consent--checkbox:checked, .form__consent--checkbox:checked::before {
-        border: 0;
+        border: 0 solid transparent;
         opacity: 1; }
+  .form__btn {
+    border: none;
+    background-color: #0c7d69;
+    padding: 1.6rem 0;
+    color: #fff;
+    border-radius: 0.8rem; }
 
 .success {
   left: 50%;

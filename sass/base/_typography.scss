@@ -13,21 +13,22 @@ body,
 }
 
 .paragraph {
-  line-height: 1.5;
-
-  &__md {
+  &__md--bold {
+    line-height: 1.5;
     font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
 
-    &--bold {
-      font-weight: 700;
-    }
+  &__md--regular {
+    line-height: 1.5;
 
-    &--regular {
-      font-weight: 400;
-    }
+    font-size: 1.8rem;
+    font-weight: 400;
   }
 
   &__sm {
     font-size: 1.6rem;
+    line-height: 1.5;
   }
 }

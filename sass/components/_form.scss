@@ -116,9 +116,17 @@
 
       &:checked,
       &:checked::before {
-        border: 0;
+        border: 0 solid transparent;
         opacity: 1;
       }
     }
+  }
+
+  &__btn {
+    border: none;
+    background-color: $green-dark;
+    padding: 1.6rem 0;
+    color: $white;
+    border-radius: 0.8rem;
   }
 }
