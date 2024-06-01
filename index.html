@@ -48,13 +48,23 @@
           <label for="first-name" class="form__label paragraph__sm"
             >First Name</label
           >
-          <input type="text" class="form__input" id="first-name" />
+          <input
+            type="text"
+            class="form__input paragraph__md--regular"
+            id="first-name"
+          />
+          <p class="paragraph__error">This field is required</p>
         </article>
         <article class="form__names--box">
           <label for="last-name" class="form__label paragraph__sm"
             >Last Name</label
           >
-          <input type="text" class="form__input" id="last-name" />
+          <input
+            type="text"
+            class="form__input paragraph__md--regular"
+            id="last-name"
+          />
+          <p class="paragraph__error">This field is required</p>
         </article>
       </article>
 
@@ -62,7 +72,12 @@
         <label for="email" class="form__label paragraph__sm"
           >Email Address</label
         >
-        <input type="email" class="form__input" id="email" />
+        <input
+          type="email"
+          class="form__input paragraph__md--regular"
+          id="email"
+        />
+        <p class="paragraph__error">Please enter a valid email</p>
       </article>
 
       <article class="form__queries">
@@ -91,15 +106,17 @@
             >
           </article>
         </article>
+        <p class="paragraph__error">Please select a query type</p>
       </article>
 
       <article class="form__message">
         <label for="message" class="form__label paragraph__sm">Message</label>
         <textarea
-          class="form__message--textarea paragraph__sm"
+          class="form__message--textarea paragraph__md--regular"
           name="message"
           id="message"
         ></textarea>
+        <p class="paragraph__error">This field is required</p>
       </article>
 
       <article class="form__consent">
@@ -112,6 +129,9 @@
         <label class="form__label paragraph__sm" for="checkbox"
           >I consent to being contacted by the team</label
         >
+        <p class="paragraph__error">
+          To submit this form, please consent to being contacted
+        </p>
       </article>
 
       <button type="submit" class="form__btn paragraph__md--bold">

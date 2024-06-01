@@ -101,6 +101,7 @@
     &--textarea {
       @include inputStyling;
       height: 21.6rem;
+      color: $grey-dark;
 
       @media screen and (min-width: $bp-tablet) {
         height: 13.2rem;
@@ -114,9 +115,10 @@
 
   &__consent {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: min-content auto;
     align-items: center;
-    gap: $spacing-3;
+    column-gap: $spacing-3;
+    row-gap: $spacing-1;
 
     &--checkbox {
       @include resetCheckboxRadio;
@@ -139,6 +141,10 @@
         border: 0 solid transparent;
         opacity: 1;
       }
+    }
+
+    & .paragraph__error {
+      grid-column: 1 / 3;
     }
   }
 

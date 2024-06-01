@@ -22,7 +22,6 @@ body,
 
   &__md--regular {
     line-height: 1.5;
-
     font-size: 1.8rem;
     font-weight: 400;
   }
@@ -30,5 +29,11 @@ body,
   &__sm {
     font-size: 1.6rem;
     line-height: 1.5;
+  }
+
+  &__error {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: $red-error;
   }
 }
