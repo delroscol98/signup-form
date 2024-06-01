@@ -103,10 +103,18 @@ body,
         height: 1.3rem;
         background: #86a2a5;
         border-radius: 50%;
-        transform: scale(0);
+        opacity: 0;
         transition: all 0.2s; }
       .form__queries--radio:checked::before {
-        transform: scale(1); }
+        opacity: 1; }
+  .form__message {
+    display: grid;
+    gap: 0.8rem; }
+    .form__message--textarea {
+      padding: 1.2rem 2.4rem;
+      border-radius: 0.8rem;
+      border: 1px solid #86a2a5;
+      height: 21.6rem; }
 
 .success {
   left: 50%;
