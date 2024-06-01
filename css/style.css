@@ -49,7 +49,8 @@ body,
   width: calc(min(91.467%, 73.6rem));
   border-radius: 1.6rem;
   display: grid;
-  gap: 2.4rem; }
+  gap: 2.4rem;
+  z-index: 1; }
   @media screen and (min-width: 47em) {
     .form {
       margin: 12.8rem 0; } }
@@ -176,12 +177,13 @@ body,
   position: absolute;
   top: 2.4rem;
   padding: 2.4rem;
-  background-color: #0c7d69;
+  background-color: #2a4144;
   color: #fff;
   border-radius: 1.2rem;
   display: grid;
   gap: 0.8rem;
-  display: none; }
+  z-index: 2;
+  opacity: 0; }
   .success__heading {
     display: flex;
     align-items: center;

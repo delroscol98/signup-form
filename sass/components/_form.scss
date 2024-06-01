@@ -8,6 +8,7 @@
   border-radius: $spacing-3;
   display: grid;
   gap: $spacing-4;
+  z-index: 1;
 
   @media screen and (min-width: $bp-tablet) {
     margin: $spacing-7 0;
