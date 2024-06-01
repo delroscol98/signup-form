@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+.heading {
+  font-size: 3.2rem;
+  line-height: 1;
+  letter-spacing: -0.1rem;
+}
+
+.paragraph {
+  line-height: 1.5;
+
+  &__md {
+    font-size: 1.8rem;
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--regular {
+      font-weight: 400;
+    }
+  }
+
+  &__sm {
+    font-size: 1.6rem;
+  }
+}
