@@ -1,13 +1,17 @@
 .form {
   @include centerHorizontal;
   position: relative;
-  margin-top: $spacing-5;
-  padding: 2.4rem;
+  margin: $spacing-5 0;
+  padding: $spacing-4;
   background-color: $white;
   width: calc(min(91.467%, 73.6rem));
-  border-radius: 1.6rem;
+  border-radius: $spacing-3;
   display: grid;
   gap: $spacing-4;
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: $spacing-7 0;
+  }
 
   &__label {
     color: $grey-dark;
@@ -27,27 +31,34 @@
   }
 
   &__names {
-    display: flex;
-    flex-direction: column;
     display: grid;
     gap: $spacing-4;
 
+    @media screen and (min-width: $bp-tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-3;
+    }
+
     &--box {
-      @include flexColumnSpacing-1;
+      @include gridColumnSpacing-1;
     }
   }
 
   &__email {
-    @include flexColumnSpacing-1;
+    @include gridColumnSpacing-1;
   }
 
   &__queries {
-    @include flexColumnSpacing-1;
+    @include gridColumnSpacing-1;
 
     &--container {
-      display: flex;
-      flex-direction: column;
+      display: grid;
       gap: $spacing-3;
+
+      @media screen and (min-width: $bp-tablet) {
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-3;
+      }
     }
 
     &--box {
@@ -84,11 +95,19 @@
   }
 
   &__message {
-    @include flexColumnSpacing-1;
+    @include gridColumnSpacing-1;
 
     &--textarea {
       @include inputStyling;
       height: 21.6rem;
+
+      @media screen and (min-width: $bp-tablet) {
+        height: 13.2rem;
+      }
+
+      @media screen and (min-width: $bp-desktop) {
+        height: 8.1rem;
+      }
     }
   }
 
@@ -125,8 +144,8 @@
   &__btn {
     border: none;
     background-color: $green-dark;
-    padding: 1.6rem 0;
+    padding: $spacing-3 0;
     color: $white;
-    border-radius: 0.8rem;
+    border-radius: $spacing-1;
   }
 }

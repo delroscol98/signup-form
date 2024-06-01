@@ -3,14 +3,14 @@
   transform: translateX(-50%);
 }
 
-@mixin flexColumnSpacing-1 {
+@mixin gridColumnSpacing-1 {
   display: grid;
   gap: $spacing-1;
 }
 
 @mixin inputStyling {
   padding: $spacing-2 $spacing-4;
-  border-radius: 0.8rem;
+  border-radius: $spacing-1;
   border: 1px solid $grey-light;
 }
 

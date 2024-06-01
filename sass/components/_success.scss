@@ -3,11 +3,11 @@
 
   width: calc(min(87.2%, 45rem));
   position: absolute;
-  top: 2.4rem;
-  padding: 2.4rem;
+  top: $spacing-4;
+  padding: $spacing-4;
   background-color: $green-dark;
   color: $white;
-  border-radius: 1.2rem;
+  border-radius: $spacing-2;
   display: grid;
   gap: $spacing-1;
   display: none; //MUST CHANGE AT THE END AND ADD A Z-INDEX

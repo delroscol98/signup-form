@@ -43,13 +43,16 @@ body,
   left: 50%;
   transform: translateX(-50%);
   position: relative;
-  margin-top: 3.2rem;
+  margin: 3.2rem 0;
   padding: 2.4rem;
   background-color: #fff;
   width: calc(min(91.467%, 73.6rem));
   border-radius: 1.6rem;
   display: grid;
   gap: 2.4rem; }
+  @media screen and (min-width: 47em) {
+    .form {
+      margin: 12.8rem 0; } }
   .form__label {
     color: #2a4144; }
   .form__label::after {
@@ -64,10 +67,12 @@ body,
     border-radius: 0.8rem;
     border: 1px solid #86a2a5; }
   .form__names {
-    display: flex;
-    flex-direction: column;
     display: grid;
     gap: 2.4rem; }
+    @media screen and (min-width: 47em) {
+      .form__names {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.6rem; } }
     .form__names--box {
       display: grid;
       gap: 0.8rem; }
@@ -78,9 +83,12 @@ body,
     display: grid;
     gap: 0.8rem; }
     .form__queries--container {
-      display: flex;
-      flex-direction: column;
+      display: grid;
       gap: 1.6rem; }
+      @media screen and (min-width: 47em) {
+        .form__queries--container {
+          grid-template-columns: 1fr 1fr;
+          gap: 1.6rem; } }
     .form__queries--box {
       padding: 1.2rem 2.4rem;
       border-radius: 0.8rem;
@@ -120,6 +128,12 @@ body,
       border-radius: 0.8rem;
       border: 1px solid #86a2a5;
       height: 21.6rem; }
+      @media screen and (min-width: 47em) {
+        .form__message--textarea {
+          height: 13.2rem; } }
+      @media screen and (min-width: 63em) {
+        .form__message--textarea {
+          height: 8.1rem; } }
   .form__consent {
     display: grid;
     grid-template-columns: max-content auto;
