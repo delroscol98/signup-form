@@ -1,0 +1,45 @@
+.form {
+  @include centerHorizontal;
+  position: relative;
+  margin-top: $spacing-5;
+  padding: 2.4rem;
+  background-color: $white;
+  width: calc(min(91.467%, 73.6rem));
+  border-radius: 1.6rem;
+  display: grid;
+  gap: $spacing-4;
+
+  &__label {
+    color: $grey-dark;
+  }
+
+  &__label::after {
+    content: "*";
+    display: inline;
+    font-size: inherit;
+    position: relative;
+    left: $spacing-1;
+    color: $green-dark;
+  }
+
+  &__input {
+    padding: $spacing-2 $spacing-4;
+    border-radius: 0.8rem;
+    border: 1px solid $grey-light;
+  }
+
+  &__names {
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    gap: $spacing-4;
+
+    &--box {
+      @include flexColumnSpacing-1;
+    }
+  }
+
+  &__email {
+    @include flexColumnSpacing-1;
+  }
+}

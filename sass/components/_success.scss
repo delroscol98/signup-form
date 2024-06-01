@@ -1,15 +1,16 @@
 .success {
+  @include centerHorizontal;
+
   width: calc(min(87.2%, 45rem));
   position: absolute;
   top: 2.4rem;
-  left: 50%;
-  transform: translate(-50%);
   padding: 2.4rem;
   background-color: $green-dark;
   color: $white;
   border-radius: 1.2rem;
   display: grid;
   gap: $spacing-1;
+  display: none; //MUST CHANGE AT THE END AND ADD A Z-INDEX
 
   &__heading {
     display: flex;
