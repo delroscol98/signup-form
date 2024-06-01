@@ -4,7 +4,12 @@
 }
 
 @mixin flexColumnSpacing-1 {
-  flex-direction: column;
   display: grid;
   gap: $spacing-1;
+}
+
+@mixin inputStyling {
+  padding: $spacing-2 $spacing-4;
+  border-radius: 0.8rem;
+  border: 1px solid $grey-light;
 }

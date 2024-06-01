@@ -65,13 +65,48 @@ body,
     display: grid;
     gap: 2.4rem; }
     .form__names--box {
-      flex-direction: column;
       display: grid;
       gap: 0.8rem; }
   .form__email {
-    flex-direction: column;
     display: grid;
     gap: 0.8rem; }
+  .form__queries {
+    display: grid;
+    gap: 0.8rem; }
+    .form__queries--container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem; }
+    .form__queries--box {
+      padding: 1.2rem 2.4rem;
+      border-radius: 0.8rem;
+      border: 1px solid #86a2a5;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem; }
+    .form__queries--radio {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid #86a2a5;
+      border-radius: 50%;
+      display: grid;
+      place-content: center; }
+      .form__queries--radio::before {
+        content: "";
+        display: inline;
+        width: 1.3rem;
+        height: 1.3rem;
+        background: #86a2a5;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.2s; }
+      .form__queries--radio:checked::before {
+        transform: scale(1); }
 
 .success {
   left: 50%;
