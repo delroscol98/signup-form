@@ -92,7 +92,7 @@ body,
       color: currentColor;
       width: 2rem;
       height: 2rem;
-      border: 1px solid #86a2a5;
+      border: 0.2rem solid #86a2a5;
       border-radius: 50%;
       display: grid;
       place-content: center; }
@@ -101,11 +101,12 @@ body,
         display: inline;
         width: 1.3rem;
         height: 1.3rem;
-        background: #86a2a5;
+        background: #0c7d69;
         border-radius: 50%;
         opacity: 0;
         transition: all 0.2s; }
-      .form__queries--radio:checked::before {
+      .form__queries--radio:checked, .form__queries--radio:checked::before {
+        border-color: #0c7d69;
         opacity: 1; }
   .form__message {
     display: grid;
@@ -115,6 +116,34 @@ body,
       border-radius: 0.8rem;
       border: 1px solid #86a2a5;
       height: 21.6rem; }
+  .form__consent {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    gap: 1.6rem; }
+    .form__consent--checkbox {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 2rem;
+      height: 2rem;
+      border: 0.2rem solid #86a2a5;
+      transition: all 0.2s;
+      border-radius: 0.2rem; }
+      .form__consent--checkbox::before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/images/icon-checkbox-check.svg);
+        background-size: 100%;
+        opacity: 0;
+        transition: all 0.2s; }
+      .form__consent--checkbox:checked, .form__consent--checkbox:checked::before {
+        border: 0;
+        opacity: 1; }
 
 .success {
   left: 50%;

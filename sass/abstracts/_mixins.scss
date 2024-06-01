@@ -13,3 +13,14 @@
   border-radius: 0.8rem;
   border: 1px solid $grey-light;
 }
+
+@mixin resetCheckboxRadio {
+  appearance: none;
+  background-color: $white;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid $grey-light;
+}

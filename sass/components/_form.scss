@@ -58,14 +58,8 @@
     }
 
     &--radio {
-      appearance: none;
-      background-color: $white;
-      margin: 0;
-      font: inherit;
-      color: currentColor;
-      width: 2rem;
-      height: 2rem;
-      border: 1px solid $grey-light;
+      @include resetCheckboxRadio;
+
       border-radius: 50%;
       display: grid;
       place-content: center;
@@ -75,13 +69,15 @@
         display: inline;
         width: 1.3rem;
         height: 1.3rem;
-        background: $grey-light;
+        background: $green-dark;
         border-radius: 50%;
         opacity: 0;
         transition: all 0.2s;
       }
 
+      &:checked,
       &:checked::before {
+        border-color: $green-dark;
         opacity: 1;
       }
     }
@@ -93,6 +89,36 @@
     &--textarea {
       @include inputStyling;
       height: 21.6rem;
+    }
+  }
+
+  &__consent {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    gap: $spacing-3;
+
+    &--checkbox {
+      @include resetCheckboxRadio;
+      transition: all 0.2s;
+      border-radius: 0.2rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/images/icon-checkbox-check.svg);
+        background-size: 100%;
+        opacity: 0;
+        transition: all 0.2s;
+      }
+
+      &:checked,
+      &:checked::before {
+        border: 0;
+        opacity: 1;
+      }
     }
   }
 }
