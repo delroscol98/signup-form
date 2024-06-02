@@ -2,9 +2,10 @@ const form = document.querySelector("form");
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
-const query = document.querySelector('input[name="query"]');
+const queries = document.querySelector(".form__queries");
 const message = document.getElementById("message");
 const consent = document.querySelector('input[name="consent"]');
+const success = document.querySelector(".success");
 
 const trimInput = (element) => {
   const value = element.value.trim();
@@ -24,8 +25,8 @@ const hideError = (element) => {
 
 const validateStringInput = (element) => {
   const [value] = trimInput(element);
-
   value === "" ? showError(element) : hideError(element);
+  return value;
 };
 
 const validateEmail = () => {
@@ -33,25 +34,44 @@ const validateEmail = () => {
   const [value] = trimInput(email);
 
   !regx.test(value) ? showError(email) : hideError(email);
+
+  return value;
 };
 
 const validateQuery = () => {
-  const queryContainer = query.closest(".form__queries");
+  const checkedQuery = queries.querySelector('input[name="query"]:checked');
 
-  !query.checked ? showError(queryContainer) : hideError(queryContainer);
+  if (!checkedQuery) {
+    showError(queries);
+    return false;
+  } else {
+    hideError(queries);
+    return checkedQuery.checked;
+  }
 };
 
 const validateConsent = () => {
   !consent.checked ? showError(consent) : hideError(consent);
+  return consent.checked;
 };
 
 const validateForm = () => {
-  validateStringInput(firstName);
-  validateStringInput(lastName);
-  validateEmail();
-  validateQuery();
-  validateStringInput(message);
-  validateConsent();
+  const validations = {
+    first_name: validateStringInput(firstName),
+    last_name: validateStringInput(lastName),
+    email: validateEmail(),
+    query: validateQuery(),
+    message: validateStringInput(message),
+    consent: validateConsent(),
+  };
+
+  for (const [key, value] of Object.entries(validations)) {
+    if (!value) {
+      success.classList.add("u-hidden");
+    } else {
+      success.classList.remove("u-hidden");
+    }
+  }
 };
 
 form.addEventListener("submit", (e) => {
