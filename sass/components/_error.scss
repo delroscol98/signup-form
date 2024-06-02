@@ -1,10 +1,5 @@
 /////////////////////
 ///ERROR MESSAGES
-.form__input,
-.form__queries,
-.form__consent--checkbox {
-  transition: all 0.2s;
-}
 
 .form__input.error ~ .paragraph__error,
 .form__queries.error .paragraph__error,
