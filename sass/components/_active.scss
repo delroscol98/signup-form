@@ -1,0 +1,11 @@
+////////////////////////////////////
+/// INPUT FOCUS
+.form__input:focus {
+  outline: 1px solid $green-light;
+}
+
+////////////////////////////////////
+/// RADIO FOCUS
+.form__queries--box:has(.form__queries--radio:checked) {
+  background-color: $green-light;
+}

@@ -14,20 +14,6 @@ body {
   min-height: 100vh;
   background-color: #e0f1e8; }
 
-.form__input,
-.form__queries,
-.form__consent--checkbox {
-  transition: all 0.2s; }
-
-.form__input.error ~ .paragraph__error,
-.form__queries.error .paragraph__error,
-.form__consent--checkbox.error ~ .paragraph__error {
-  margin-top: 0;
-  opacity: 1; }
-
-.form__input.error {
-  border: 1px solid #d73c3c; }
-
 body,
 .form__input {
   font-family: "Karla", sans-serif;
@@ -58,7 +44,29 @@ body,
   line-height: 1.5;
   color: #d73c3c;
   margin-top: -3rem;
-  opacity: 0; }
+  opacity: 0;
+  visibility: hidden; }
+
+.form__input:focus {
+  outline: 1px solid #e0f1e8; }
+
+.form__queries--box:has(.form__queries--radio:checked) {
+  background-color: #e0f1e8; }
+
+.form__input,
+.form__queries,
+.form__consent--checkbox {
+  transition: all 0.2s; }
+
+.form__input.error ~ .paragraph__error,
+.form__queries.error .paragraph__error,
+.form__consent--checkbox.error ~ .paragraph__error {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible; }
+
+.form__input.error {
+  border: 1px solid #d73c3c; }
 
 .form {
   left: 50%;
@@ -74,7 +82,8 @@ body,
   z-index: 1; }
   @media screen and (min-width: 47em) {
     .form {
-      margin: 12.8rem 0; } }
+      margin: 12.8rem 0;
+      padding: 4rem; } }
   .form__label {
     color: #2a4144; }
   .form__label::after {
