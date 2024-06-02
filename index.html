@@ -20,7 +20,7 @@
     <script src="./src/index.js" defer></script>
   </head>
   <body>
-    <section class="success">
+    <section class="success u-hidden">
       <section class="success__heading">
         <svg
           class="success__icon"
@@ -54,6 +54,7 @@
             type="text"
             class="form__input paragraph__md--regular"
             id="first-name"
+            name="first-name"
           />
           <p class="paragraph__error">This field is required</p>
         </article>
@@ -65,6 +66,7 @@
             type="text"
             class="form__input paragraph__md--regular"
             id="last-name"
+            name="last-name"
           />
           <p class="paragraph__error">This field is required</p>
         </article>
@@ -78,6 +80,7 @@
           type="email"
           class="form__input paragraph__md--regular"
           id="email"
+          name="email"
         />
         <p class="paragraph__error">Please enter a valid email</p>
       </article>
@@ -91,6 +94,7 @@
               type="radio"
               name="query"
               id="general"
+              value="General Enquiry"
             />
             <label class="form__queries--label paragraph__sm" for="general"
               >General Enquiry</label
@@ -102,6 +106,7 @@
               type="radio"
               name="query"
               id="support"
+              value="Support Request"
             />
             <label class="form__queries--label paragraph__sm" for="support"
               >Support Request</label
@@ -125,7 +130,7 @@
         <input
           type="checkbox"
           id="checkbox"
-          name="checkbox"
+          name="consent"
           class="form__consent--checkbox"
         />
         <label class="form__label paragraph__sm" for="checkbox"

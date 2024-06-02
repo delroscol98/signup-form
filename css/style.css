@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+.u-hidden {
+  opacity: 0; }
+
 *,
 *::after,
 *::before {
@@ -221,8 +224,7 @@ body,
   border-radius: 1.2rem;
   display: grid;
   gap: 0.8rem;
-  z-index: 2;
-  opacity: 0; }
+  z-index: 2; }
   .success__heading {
     display: flex;
     align-items: center;

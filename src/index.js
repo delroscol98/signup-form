@@ -4,7 +4,7 @@ const lastName = document.getElementById("last-name");
 const email = document.getElementById("email");
 const query = document.querySelector('input[name="query"]');
 const message = document.getElementById("message");
-const consent = document.querySelector('input[name="checkbox"]');
+const consent = document.querySelector('input[name="consent"]');
 
 const validateStringInput = (element, classStr = "error") => {
   const value = element.value.trim();
