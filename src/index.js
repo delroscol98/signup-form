@@ -6,35 +6,43 @@ const query = document.querySelector('input[name="query"]');
 const message = document.getElementById("message");
 const consent = document.querySelector('input[name="consent"]');
 
-const validateStringInput = (element, classStr = "error") => {
+const trimInput = (element) => {
   const value = element.value.trim();
 
-  value === ""
-    ? element.classList.add(classStr)
-    : element.classList.remove(classStr);
+  return [value];
+};
+
+const showError = (element) => {
+  element.classList.add("error");
+  return false;
+};
+
+const hideError = (element) => {
+  element.classList.remove("error");
+  return true;
+};
+
+const validateStringInput = (element) => {
+  const [value] = trimInput(element);
+
+  value === "" ? showError(element) : hideError(element);
 };
 
 const validateEmail = () => {
   const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
-  const emailValue = email.value.trim();
+  const [value] = trimInput(email);
 
-  !regx.test(emailValue)
-    ? email.classList.add("error")
-    : email.classList.remove("error");
+  !regx.test(value) ? showError(email) : hideError(email);
 };
 
 const validateQuery = () => {
   const queryContainer = query.closest(".form__queries");
 
-  !query.checked
-    ? queryContainer.classList.add("error")
-    : queryContainer.classList.remove("error");
+  !query.checked ? showError(queryContainer) : hideError(queryContainer);
 };
 
 const validateConsent = () => {
-  !consent.checked
-    ? consent.classList.add("error")
-    : consent.classList.remove("error");
+  !consent.checked ? showError(consent) : hideError(consent);
 };
 
 const validateForm = () => {
