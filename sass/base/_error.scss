@@ -1,0 +1,20 @@
+/////////////////////
+///ERROR MESSAGES
+.form__input,
+.form__queries,
+.form__consent--checkbox {
+  transition: all 0.2s;
+}
+
+.form__input.error ~ .paragraph__error,
+.form__queries.error .paragraph__error,
+.form__consent--checkbox.error ~ .paragraph__error {
+  margin-top: 0;
+  opacity: 1;
+}
+
+/////////////////////
+///INPUT STATE
+.form__input.error {
+  border: 1px solid $red-error;
+}
