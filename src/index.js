@@ -65,7 +65,7 @@ const validateForm = () => {
     consent: validateConsent(),
   };
 
-  for (const [key, value] of Object.entries(validations)) {
+  for (const [, value] of Object.entries(validations)) {
     if (!value) {
       success.classList.add("u-hidden");
     } else {
