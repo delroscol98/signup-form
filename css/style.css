@@ -140,8 +140,9 @@ body,
       height: 2rem;
       border: 0.2rem solid #86a2a5;
       border-radius: 50%;
-      display: grid;
-      place-content: center; }
+      display: flex;
+      justify-content: center;
+      align-items: center; }
       .form__queries--radio::before {
         content: "";
         display: inline;
@@ -150,6 +151,7 @@ body,
         background: #0c7d69;
         border-radius: 50%;
         opacity: 0;
+        transform: translate(-0.5px, -0.5px);
         transition: all 0.2s; }
       .form__queries--radio:checked, .form__queries--radio:checked::before {
         border-color: #0c7d69;

@@ -77,8 +77,9 @@
       @include resetCheckboxRadio;
 
       border-radius: 50%;
-      display: grid;
-      place-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &::before {
         content: "";
@@ -88,6 +89,7 @@
         background: $green-dark;
         border-radius: 50%;
         opacity: 0;
+        transform: translate(-0.5px, -0.5px);
         transition: all 0.2s;
       }
 
