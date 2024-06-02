@@ -46,7 +46,7 @@ const validateQuery = () => {
     return false;
   } else {
     hideError(queries);
-    return checkedQuery.checked;
+    return checkedQuery.value;
   }
 };
 
@@ -72,6 +72,8 @@ const validateForm = () => {
       success.classList.remove("u-hidden");
     }
   }
+
+  console.log(validations);
 };
 
 form.addEventListener("submit", (e) => {
