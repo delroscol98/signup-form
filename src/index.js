@@ -46,6 +46,7 @@ const validateQuery = () => {
     return false;
   } else {
     hideError(queries);
+    checkedQuery.ariaChecked = true;
     return checkedQuery.value;
   }
 };
