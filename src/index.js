@@ -71,6 +71,7 @@ const validateForm = () => {
   for (const [, value] of Object.entries(validations)) {
     if (!value) {
       success.classList.add("u-hidden");
+      return;
     } else {
       success.classList.remove("u-hidden");
     }
