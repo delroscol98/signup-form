@@ -51,7 +51,9 @@ const validateQuery = () => {
 };
 
 const validateConsent = () => {
-  !consent.checked ? showError(consent) : hideError(consent);
+  !consent.checked
+    ? (showError(consent), (consent.ariaChecked = false))
+    : (hideError(consent), (consent.ariaChecked = true));
   return consent.checked;
 };
 

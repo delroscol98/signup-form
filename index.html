@@ -47,7 +47,10 @@
 
       <article class="form__names">
         <article class="form__names--box">
-          <label for="first-name" class="form__label paragraph__sm"
+          <label
+            aria-labelledby="first-name label"
+            for="first-name"
+            class="form__label paragraph__sm"
             >First Name</label
           >
           <input
@@ -59,7 +62,10 @@
           <p class="paragraph__error">This field is required</p>
         </article>
         <article class="form__names--box">
-          <label for="last-name" class="form__label paragraph__sm"
+          <label
+            aria-labelledby="last-name label"
+            for="last-name"
+            class="form__label paragraph__sm"
             >Last Name</label
           >
           <input
@@ -73,7 +79,10 @@
       </article>
 
       <article class="form__email">
-        <label for="email" class="form__label paragraph__sm"
+        <label
+          aria-labelledby="email label"
+          for="email"
+          class="form__label paragraph__sm"
           >Email Address</label
         >
         <input
@@ -96,7 +105,10 @@
               id="general"
               value="General Enquiry"
             />
-            <label class="form__queries--label paragraph__sm" for="general"
+            <label
+              aria-labelledby="general label"
+              class="form__queries--label paragraph__sm"
+              for="general"
               >General Enquiry</label
             >
           </article>
@@ -108,7 +120,10 @@
               id="support"
               value="Support Request"
             />
-            <label class="form__queries--label paragraph__sm" for="support"
+            <label
+              aria-labelledby="support label"
+              class="form__queries--label paragraph__sm"
+              for="support"
               >Support Request</label
             >
           </article>
@@ -117,7 +132,12 @@
       </article>
 
       <article class="form__message">
-        <label for="message" class="form__label paragraph__sm">Message</label>
+        <label
+          aria-labelledby="message label"
+          for="message"
+          class="form__label paragraph__sm"
+          >Message</label
+        >
         <textarea
           class="form__input form__message--textarea paragraph__md--regular"
           name="message"
@@ -128,12 +148,17 @@
 
       <article class="form__consent">
         <input
+          role="checkbox"
+          aria-checked="false"
           type="checkbox"
           id="checkbox"
           name="consent"
           class="form__consent--checkbox"
         />
-        <label class="form__label paragraph__sm" for="checkbox"
+        <label
+          aria-labelledby="checkbox label"
+          class="form__label paragraph__sm"
+          for="checkbox"
           >I consent to being contacted by the team</label
         >
         <p class="paragraph__error">
